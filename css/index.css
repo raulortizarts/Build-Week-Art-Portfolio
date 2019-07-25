@@ -80,15 +80,25 @@ button:focus {
         width: 100%;
         display: flex;    
         flex-wrap: wrap;
+        justify-content: center;
     } 
     input{
         height: 30px;
         width: 80%;
         margin-top: 20px;
-        border-radius: 10px;
-        /* box-shadow: none; */
-        
+        border-radius: 25px;  
+        padding: 10px 5px 10px 20px;      
     }
+
+    button{
+        height: 54px;
+        width: 85%;
+        margin-top: 20px;
+        border-radius: 25px;  
+        font-size: 2rem;
+        font-weight: 900;
+    }
+ 
 /* End of Modal Styles */
 footer{
     bottom: 0px;
