@@ -1,6 +1,13 @@
 body{
     font-size: 16px
 }
+/*  remove Blue Lines from input field on focus */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 /* Modal Styles */
 .modal{
     display: none;
@@ -28,12 +35,15 @@ body{
         text-decoration: none;
      }
     #close{
-        font-size: 1.2rem;
+        font-size: 2.2rem;
         font-weight: bolder;
         cursor: pointer;
+        top: 0;
+        /* float: left; */
+        position: absolute;
     }
     /* image */
-
+    /* Form Div */
     .formDiv{
         width: 65%;
         height: 670px;
@@ -49,10 +59,36 @@ body{
         border: 1px solid #888;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     }
+    /*  Image inside of the form div  */
+    .formLogo{
+        width: 48%;
+    }
     .formDiv img{
-        width: 50%;
+        width: 100%;
     }
     
+    .formDiv .loginForm{
+        width: 48%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    .loginForm form{
+        width: 100%;
+        display: flex;    
+        flex-wrap: wrap;
+    } 
+    input{
+        height: 30px;
+        width: 80%;
+        margin-top: 20px;
+        border-radius: 10px;
+        /* box-shadow: none; */
+        
+    }
 /* End of Modal Styles */
 footer{
     bottom: 0px;
