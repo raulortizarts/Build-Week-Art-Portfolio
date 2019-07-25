@@ -1,3 +1,6 @@
+body{
+    font-size: 16px
+}
 .modal{
     display: none;
     position: fixed;
@@ -6,22 +9,27 @@
     height: 100%;
     overflow: auto;
     background: blanchedalmond;
+    top: 0; 
+    opacity: .7;
 }
- #modalOpen{
+ .ulModal{
      width: 200px;
      display: flex;
     justify-content: space-evenly
     }
-    #modalOpen li{
+    .ulModal li{
         /* removing the bullets from the li  */
         list-style-type: none;
 
     }
-    #modalOpen li a{
+   .ulModal li a{
         text-decoration: none;
      }
-
-
+    #close{
+        font-size: 1.2rem;
+        font-weight: bolder;
+        cursor: pointer;
+    }
 
 footer{
     bottom: 0px;

@@ -2,10 +2,17 @@
 const modal = document.getElementById("modalId");
 
 // get the login/signUp buttons
-const modalOpen = document.getElementById("modalOpen");
+const modalOpen = document.querySelectorAll(".modalOpen");
 
-console.log(modalOpen)
-modalOpen.addEventListener("click", function(e){
+const closeSpan = document.getElementById("close")
+modalOpen.forEach(btn =>{
+    btn.addEventListener("click", function(e){
+        e.preventDefault();
+        modal.style.display = "block"
+    })
+})
+
+closeSpan.addEventListener("click", function(e){
     e.preventDefault();
-    console.log("hello")
+    modal.style.display = "none"
 })
