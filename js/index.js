@@ -14,5 +14,11 @@ modalOpen.forEach(btn =>{
 
 closeSpan.addEventListener("click", function(e){
     e.preventDefault();
-    modal.style.display = "none"
+    modal.style.display = "none";
+})
+window.addEventListener("click", function(e){
+    e.preventDefault();
+    if(e.target.className === "modal"){
+        modal.style.display = "none";
+    }
 })
