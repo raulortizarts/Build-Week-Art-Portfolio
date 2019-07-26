@@ -5,10 +5,16 @@ let blogElems = "";
 
 blogObj.forEach((object, index) => {
     blogElems += `
-        <div>
-            <h3>Title: ${object.title}</h3>
-            <h5>AUthor: ${object.author}</h5>
-            <p>Description: ${object.description}</p>
+        <div class='section'>
+            <header>
+              <h3>Title: ${object.title}</h3>
+              <h5>Author: ${object.author}</h5>
+            </header>
+            <div class="entry-content">
+              <img src='${object.img}' alt='${object.title}'>
+              <p>Description: ${object.description}</p>
+            </div>
+            
         </div> <hr>
     `
 }) 
