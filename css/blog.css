@@ -1,0 +1,20 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    
+
+}
+
+.article{
+    /* height: 200px; */
+    width: 60%;
+    background: #ea8a95;
+    margin-right: 40px; 
+}
+.aside{
+    width: 25%;
+    background: antiquewhite;
+    margin-right: 40px;
+}
