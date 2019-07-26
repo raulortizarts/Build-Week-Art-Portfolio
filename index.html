@@ -28,8 +28,8 @@
     </div>
     <div class="loginSignUpDiv">
       <ul class="ulModal">
-        <li class="modalOpen"><a href="#" class="login" >Login </a></li>
-        <li class="modalOpen"> <a href="#" class="login" >Sing-up</a></li>
+        <li class="modalOpen"  ><a href="#"  id="login">Login </a></li>
+        <li class="modalOpen" > <a href="#" id="signUp" >Sing-up</a></li>
       </ul>
     </div>
   </header>
@@ -41,14 +41,25 @@
       <div class="formLogo">
         <img src="./images/placeholderLogo.svg" alt="logo">
       </div>
-      <div class="loginForm">
-        <h3>Member Login</h3>
-        <form>
-           <input type="email" placeholder="Email" required> <br>
-           <input type="password" placeholder="Password" required><br>
-           <!-- <input type="submit" value="LogIn"> -->
-           <button>Login </button>
-        </form>
+      <div class="loginSingUpForm">
+        <div class="loginForm" >
+          <h3>Member Login</h3>
+          <form>
+             <input type="email" placeholder="Email" required> <br>
+             <input type="password" placeholder="Password" required><br>
+             <!-- <input type="submit" value="LogIn"> -->
+             <button>Login </button>
+            </form>
+          </div>
+          <div class="signUPForm" style="display: none">
+              <h3>Create an Account</h3>
+              <form>
+                <input type="text" name="fName" placeholder="firstName" > 
+                <input type="text" name="lName" placeholder="lastName" > 
+                <input type="email" placeholder="Email" required> <br>
+                <button>Sign Up </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
