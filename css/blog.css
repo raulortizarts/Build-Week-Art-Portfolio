@@ -1,19 +1,29 @@
 .wrapper{
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    
+    margin: 0 auto;
 
 }
 
 .article{
     /* height: 200px; */
-    width: 60%;
+    width: 50%;
     background: #ea8a95;
     margin-right: 40px; 
     padding: 20px;
 }
+    .article .entry-content{
+        display: flex;
+        justify-content: space-around;
+    }
+    .article .entry-content img{
+        margin-right: 20px;
+    }
+    .article .entry-content p{
+        margin-top: 0px;
+    }
 .aside{
     width: 25%;
     background: antiquewhite;
