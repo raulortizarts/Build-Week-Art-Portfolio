@@ -14,11 +14,13 @@ modalOpen.forEach(btn =>{
     btn.addEventListener("click", function(e){
         e.preventDefault();
         console.log(e.target.id)
-        modal.style.display = "block"
         if(e.target.id === "login"){
-            console.log("hello")
+            signUpForm.style.display = "none";
+            modal.style.display = "block"
             loginForm.style.display = "block";
         }else if (e.target.id === "signUp"){
+            modal.style.display = "block"
+            loginForm.style.display = "none";
             signUpForm.style.display = "block";
         }
     })
