@@ -26,3 +26,17 @@ blogObj.forEach((object, index) => {
 }) 
 
 blogArticleDiv.innerHTML = blogElems; 
+
+// Get the tutorial div
+let svgTag = ''
+const tutorial = document.querySelector(".tutorials")
+tutorialsSvg.forEach(svg=>{
+    svgTag += `
+        <div class='some'> 
+            <img src='${svg.img}'>
+            <h4> ${svg.text}</h4>
+        </div> 
+        `;
+});
+
+tutorial.innerHTML += svgTag;

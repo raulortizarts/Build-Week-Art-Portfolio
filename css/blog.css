@@ -51,4 +51,17 @@
     color: black;
     font-weight: bold; 
     font-size: 1.01rem;
+} 
+.tutorials{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tutorials h4{
+    width: 100%;
+}
+.some{
+    width: 45%;
+}
+.some img{
+    width: 45%;
 }

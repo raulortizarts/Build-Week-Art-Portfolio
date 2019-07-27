@@ -42,3 +42,44 @@
     //     blogPost : ""
     // },
 ];
+
+const tutorialsSvg = [
+    {
+        img: "./../images/blogImages/animals-philippine-tarsier.png",
+        text: "Wild Life"
+    },
+    {
+        img : './../images/blogImages/blackwhite.png',
+        text : 'Black and White'
+    },
+    {
+        img: './../images/blogImages/bycicle.png',
+        text: "Street Photography"
+    },
+    {
+        img: "./../images/blogImages/cloudy-night-sky (1).png",
+        text: "Night Sky Photography"
+    },
+    {
+        img: "./../images/blogImages/landscape.png",
+        text: "Land Scape Photography"
+    },
+    {
+        img: "./../images/blogImages/photo-camera.png",
+        text: "Photography Basics"
+    },
+    {
+        img: "./../images/blogImages/photograph-portrait.png",
+        text: "Portrait Photography "
+    },
+    {
+        img: "./../images/blogImages/plant.png",
+        text: "Micro Photography"
+    },
+    {
+        img: "./../images/blogImages/trophy-award.png",
+        text: "Advance Photography"
+    },
+    
+    ,
+]
