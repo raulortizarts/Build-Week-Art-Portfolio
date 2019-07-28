@@ -45,7 +45,7 @@ let articleTitle = document.createElement("h1");
 let articleBlog = document.createElement("p");
 let articleImg = new Image()
 modalDiv.style.display = 'none'
-modalDiv.classList.add("modal")
+// modalDiv.classList.add("modal")
 modalArticle.classList.add("modalArticle");
 
 // Grab all div in the with classes of section
@@ -71,7 +71,15 @@ allSections.forEach((blog, i)=>{
                modalArticle.append(articleTitle, articleImg, articleBlog);
                modalDiv.appendChild(modalArticle);
            });
-           modalDiv.style.display= "block"
+           modalDiv.style.display = "block"
+        window.addEventListener("click", function(e){
+            e.preventDefault();
+            this.console.log(e)
+            if (e.target.className === "modal"){
+                this.console.log("hello")
+                modalDiv.style.display = 'none'
+            }
+        })
         }
 
     })
