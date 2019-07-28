@@ -23,10 +23,8 @@ blogObj.forEach((object, index) => {
             
         </div> <hr>
     `
-}) 
-
+}) ;
 blogArticleDiv.innerHTML = blogElems; 
-
 // Get the tutorial div
 let svgTag = ''
 const tutorial = document.querySelector(".tutorials")
@@ -38,5 +36,4 @@ tutorialsSvg.forEach(svg=>{
         </div> 
         `;
 });
-
 tutorial.innerHTML += svgTag;
