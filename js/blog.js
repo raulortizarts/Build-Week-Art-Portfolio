@@ -6,8 +6,8 @@ let blogElems = "";
 blogObj.forEach((object, index) => {
     const randomDate = function(){
         let formatedDate = new Date(+(new Date()) - Math.floor(Math.random()*10000000000))
-        formatedDate = formatedDate.getMonth() + "/" + formatedDate.getDay() +"/" + formatedDate.getFullYear() 
-        return formatedDate
+        formatedDate = formatedDate.getMonth() + "/" + formatedDate.getDay() +"/" + formatedDate.getFullYear() ;
+        return formatedDate;
     
     }
     blogElems += `
@@ -22,7 +22,7 @@ blogObj.forEach((object, index) => {
             </div>
             
         </div> <hr>
-    `
+    `;
 }) ;
 blogArticleDiv.innerHTML = blogElems; 
 // Get the tutorial div
@@ -37,3 +37,31 @@ tutorialsSvg.forEach(svg=>{
         `;
 });
 tutorial.innerHTML += svgTag;
+
+// creating Modal divs
+
+let modalDiv = document.createElement("div");
+let modalArticle = document.createElement('div');
+modalDiv.classList.add("modal")
+modalArticle.classList.add("modalArticle");
+
+// Grab all div in the with classes of section
+let currentArticleObj = []
+const  allSections =  document.querySelectorAll('.section');
+allSections.forEach((blog, i)=>{
+    // adding event lister to each section
+    blog.addEventListener('click', function(e){
+       //Preventing the default click action on elements
+        e.preventDefault();
+        if(e.target.tagName === "IMG" || e.target.tagName === 'H3'){
+            currentArticleObj = blogObj.filter( obj =>{
+               if(e.target.alt === obj.title){
+                   return currentArticleObj.push(obj)
+                } else if (e.target.innerHTML === obj.title){
+                    return currentArticleObj.push(obj)
+                }
+            });
+        }
+        console.log(currentArticleObj)
+    })
+});

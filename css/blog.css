@@ -18,10 +18,14 @@
         font-size: 2rem;
         display: inline;
         margin: 0px 0px 0px 10px;
+        cursor: pointer;
+
     } 
     .section header img{
         width: 30px;
         height: 30px;
+        cursor: pointer;
+
     }
     .article .entry-content{
         display: flex;
@@ -29,6 +33,7 @@
     }
     .article .entry-content img{
         margin-right: 20px;
+        cursor: pointer;
         
     }
     .article .entry-content p{
