@@ -39,11 +39,12 @@ tutorialsSvg.forEach(svg=>{
 tutorial.innerHTML += svgTag;
 
 // creating elements for the modal
-let modalDiv = document.createElement("div");
+let modalDiv = document.querySelector(".modal");
 let modalArticle = document.createElement('div');
 let articleTitle = document.createElement("h1");
 let articleBlog = document.createElement("p");
 let articleImg = new Image()
+modalDiv.style.display = 'none'
 modalDiv.classList.add("modal")
 modalArticle.classList.add("modalArticle");
 
@@ -67,8 +68,10 @@ allSections.forEach((blog, i)=>{
                articleTitle.innerText = e.title;
                articleBlog.innerText = e.blogPost;
                articleImg.src = e.img 
-               modalArticle.append(articleTitle, articleImg, articleBlog)
+               modalArticle.append(articleTitle, articleImg, articleBlog);
+               modalDiv.appendChild(modalArticle);
            });
+           modalDiv.style.display= "block"
         }
 
     })
