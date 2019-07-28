@@ -18,10 +18,14 @@
         font-size: 2rem;
         display: inline;
         margin: 0px 0px 0px 10px;
+        cursor: pointer;
+
     } 
     .section header img{
         width: 30px;
         height: 30px;
+        cursor: pointer;
+
     }
     .article .entry-content{
         display: flex;
@@ -29,6 +33,7 @@
     }
     .article .entry-content img{
         margin-right: 20px;
+        cursor: pointer;
         
     }
     .article .entry-content p{
@@ -64,4 +69,25 @@
 }
 .some img{
     width: 45%;
+}
+
+/* article Modals styles */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); /*Modal Background opacity Opacity*/
+    top: 0; 
+}
+
+.modalArticle{
+    width: 65%;
+     background: #ffffff;
+     margin: 10px auto;
+     padding: 10px;
+     text-align: center;
 }

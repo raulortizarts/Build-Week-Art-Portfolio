@@ -6,8 +6,8 @@ let blogElems = "";
 blogObj.forEach((object, index) => {
     const randomDate = function(){
         let formatedDate = new Date(+(new Date()) - Math.floor(Math.random()*10000000000))
-        formatedDate = formatedDate.getMonth() + "/" + formatedDate.getDay() +"/" + formatedDate.getFullYear() 
-        return formatedDate
+        formatedDate = formatedDate.getMonth() + "/" + formatedDate.getDay() +"/" + formatedDate.getFullYear() ;
+        return formatedDate;
     
     }
     blogElems += `
@@ -22,9 +22,66 @@ blogObj.forEach((object, index) => {
             </div>
             
         </div> <hr>
-    `
-}) 
-
+    `;
+}) ;
 blogArticleDiv.innerHTML = blogElems; 
-
 // Get the tutorial div
+let svgTag = ''
+const tutorial = document.querySelector(".tutorials")
+tutorialsSvg.forEach(svg=>{
+    svgTag += `
+        <div class='some'> 
+            <img src='${svg.img}'>
+            <h4> ${svg.text}</h4>
+        </div> 
+        `;
+});
+tutorial.innerHTML += svgTag;
+
+// creating elements for the modal
+let modalDiv = document.querySelector(".modal");
+let modalArticle = document.createElement('div');
+let articleTitle = document.createElement("h1");
+let articleBlog = document.createElement("p");
+let articleImg = new Image()
+modalDiv.style.display = 'none'
+// modalDiv.classList.add("modal")
+modalArticle.classList.add("modalArticle");
+
+// Grab all div in the with classes of section
+let currentArticleObj = {}
+const  allSections =  document.querySelectorAll('.section');
+allSections.forEach((blog, i)=>{
+    // adding event lister to each section
+    blog.addEventListener('click', function(e){
+       //Preventing the default click action on elements
+        e.preventDefault();
+        if(e.target.tagName === "IMG" || e.target.tagName === 'H3'){
+            currentArticleObj = blogObj.filter( obj =>{
+               if(e.target.alt === obj.title){
+                   return currentArticleObj = obj;
+                } else if (e.target.innerHTML === obj.title){
+                    return currentArticleObj = obj;
+                }
+            });
+           currentArticleObj.forEach(e=>{
+               articleTitle.innerText = e.title;
+               articleBlog.innerText = e.blogPost;
+               articleImg.src = e.img 
+               modalArticle.append(articleTitle, articleImg, articleBlog);
+               modalDiv.appendChild(modalArticle);
+           });
+           modalDiv.style.display = "block"
+        window.addEventListener("click", function(e){
+            e.preventDefault();
+            this.console.log(e)
+            if (e.target.className === "modal"){
+                this.console.log("hello")
+                modalDiv.style.display = 'none'
+            }
+        })
+        }
+
+    })
+});
+
