@@ -41,12 +41,15 @@ tutorial.innerHTML += svgTag;
 // creating elements for the modal
 let modalDiv = document.querySelector(".modal");
 let modalArticle = document.createElement('div');
+const close = document.createElement("p");
 let articleTitle = document.createElement("h1");
 let articleBlog = document.createElement("p");
-let articleImg = new Image()
-modalDiv.style.display = 'none'
-// modalDiv.classList.add("modal")
+let articleImg = new Image();
+modalDiv.style.display = 'none';
 modalArticle.classList.add("modalArticle");
+close.classList.add("close")
+close.innerHTML = '&times;';
+
 
 // Grab all div in the with classes of section
 let currentArticleObj = {}
@@ -68,10 +71,13 @@ allSections.forEach((blog, i)=>{
                articleTitle.innerText = e.title;
                articleBlog.innerText = e.blogPost;
                articleImg.src = e.img 
-               modalArticle.append(articleTitle, articleImg, articleBlog);
+               modalArticle.append(close, articleTitle, articleImg, articleBlog);
                modalDiv.appendChild(modalArticle);
            });
            modalDiv.style.display = "block"
+        close.addEventListener('click', function(e){
+            modalDiv.style.display = 'none'
+        })  
         window.addEventListener("click", function(e){
             e.preventDefault();
             this.console.log(e)

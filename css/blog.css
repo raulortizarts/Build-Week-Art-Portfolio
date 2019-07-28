@@ -91,3 +91,12 @@
      padding: 10px;
      text-align: center;
 }
+
+.close{
+    float: right;
+    cursor: pointer;
+    margin-bottom : 20px;
+    position: relative;
+   font-size: 28px; 
+    font-weight: 900px;
+}
