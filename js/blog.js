@@ -38,15 +38,17 @@ tutorialsSvg.forEach(svg=>{
 });
 tutorial.innerHTML += svgTag;
 
-// creating Modal divs
-
+// creating elements for the modal
 let modalDiv = document.createElement("div");
 let modalArticle = document.createElement('div');
+let articleTitle = document.createElement("h1");
+let articleBlog = document.createElement("p");
+let articleImg = new Image()
 modalDiv.classList.add("modal")
 modalArticle.classList.add("modalArticle");
 
 // Grab all div in the with classes of section
-let currentArticleObj = []
+let currentArticleObj = {}
 const  allSections =  document.querySelectorAll('.section');
 allSections.forEach((blog, i)=>{
     // adding event lister to each section
@@ -56,12 +58,18 @@ allSections.forEach((blog, i)=>{
         if(e.target.tagName === "IMG" || e.target.tagName === 'H3'){
             currentArticleObj = blogObj.filter( obj =>{
                if(e.target.alt === obj.title){
-                   return currentArticleObj.push(obj)
+                   return currentArticleObj = obj;
                 } else if (e.target.innerHTML === obj.title){
-                    return currentArticleObj.push(obj)
+                    return currentArticleObj = obj;
                 }
             });
+           currentArticleObj.forEach(e=>{
+               articleTitle.innerText = e.title;
+               articleBlog.innerText = e.blogPost;
+               articleImg.src = e.img 
+               modalArticle.append(articleTitle, articleImg, articleBlog)
+           });
         }
-        console.log(currentArticleObj)
+
     })
 });
