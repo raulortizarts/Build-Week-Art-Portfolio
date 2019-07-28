@@ -6,7 +6,7 @@ footer.innerHTML = `
             <li><a href='index.html'>Home</a></li>
             <li><a href='about'>About Us</a></li>
             <li><a href='blog.html'>Blog</a></li>
-            <li><a href='contact.html'>Contact Us <a></li>
+            <li><a href='contact.html'>Contact Us </a></li>
         <ul>
     </div>
     <div class='services'>

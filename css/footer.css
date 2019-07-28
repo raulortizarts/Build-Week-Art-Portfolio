@@ -9,10 +9,15 @@ footer{
  .menu, .services, .us{
      width: 33.333%;
  }
-  .menu ul, .services ul{
-    list-style-type: none;
-  }
-  .menu ul li a, .services ul li a{
+ 
+ .menu ul, .services ul{
+     list-style-type: none;
+   }
+ .menu ul li , .services ul li{
+     margin: 10px;
+     font-weight: bolder;
+   }
+    .menu ul li a, .services ul li a{
     text-decoration: none;
     color: black;
 
