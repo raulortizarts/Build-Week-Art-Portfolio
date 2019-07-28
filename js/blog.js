@@ -80,9 +80,7 @@ allSections.forEach((blog, i)=>{
         })  
         window.addEventListener("click", function(e){
             e.preventDefault();
-            this.console.log(e)
             if (e.target.className === "modal"){
-                this.console.log("hello")
                 modalDiv.style.display = 'none'
             }
         })
