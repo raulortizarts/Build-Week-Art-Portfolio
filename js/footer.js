@@ -35,5 +35,4 @@ footer.innerHTML = `
         <div>
     </div>
     <h5>&copy; 2019 Artify </h5>
-`
-z   
+`;
