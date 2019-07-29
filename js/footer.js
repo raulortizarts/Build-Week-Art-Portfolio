@@ -29,11 +29,11 @@ footer.innerHTML = `
         <div class='follow-us'>
             <h3>Follow Us </h3>
             <img src='./../images/32/twitter.png'>
-            <img src='./../images/32/facebook.png'>
+            <img src='./../images/32/facebook.png'> 
             <img src='./../images/32/instagram.png'>
             <img src='./../images/32/reddit.png'>
         <div>
     </div>
-    <h5>&copy; 2019 Artify</h5>
+    <h5>&copy; 2019 Artify </h5>
 `
-
+z   

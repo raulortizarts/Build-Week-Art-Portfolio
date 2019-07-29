@@ -1,3 +1,6 @@
+.contsiner{
+    width: 100%;
+}
 .wrapper{
     width: 80%;
     display: flex;
@@ -8,8 +11,6 @@
 }
 
 .article{
-    /* height: 200px; */
-    /* background: #ea8a95; */
     width: 60%;
     margin-right: 40px; 
     padding: 20px;
@@ -30,11 +31,14 @@
     .article .entry-content{
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: stretch;
     }
     .article .entry-content img{
         margin-right: 20px;
         cursor: pointer;
-        
+
     }
     .article .entry-content p{
         margin-top: 0px;
