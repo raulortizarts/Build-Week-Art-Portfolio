@@ -475,8 +475,6 @@ img {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  align-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
 }
@@ -514,6 +512,7 @@ img {
 }
 .article .entry-content img {
   margin-right: 20px;
+  margin: 0 auto;
   cursor: pointer;
 }
 @media (width: 500px) {
