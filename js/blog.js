@@ -17,8 +17,9 @@ blogObj.forEach((object, index) => {
             <h5>On <span>${randomDate()}</span> by ${object.author}</h5>
             </header>
             <div class="entry-content">
-              <img src='${object.img}' alt='${object.title}'>
-              <p>${object.description}</p>
+               <img src='${object.img}' alt='${object.title}'>  
+                <p>${object.description}</p>
+              
             </div>
             
         </div> <hr>
@@ -32,7 +33,7 @@ tutorialsSvg.forEach(svg=>{
     svgTag += `
         <div class='some'> 
             <img src='${svg.img}'>
-            <h4> ${svg.text}</h4>
+            <h6> ${svg.text}</h6>
         </div> 
         `;
 });
