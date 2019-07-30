@@ -2,6 +2,7 @@
     width: 100%;
     height: 500px;
     max-width: 1000px;
+    min-width: 200px;
     margin: auto;
     user-select: none;
     background: transparent;
@@ -12,22 +13,22 @@
     width: 100%;
     height: 90%;
     overflow: hidden;
-    background-color: black;
-    box-shadow: 0px 0px 5px 2px #00000078;
+    background-color: grey;
+    box-shadow: 0px 0px 5px 2px black;
     position: relative;
     border-top-right-radius: 50px;
     border-top-left-radius:5px;
     border-bottom-left-radius:50px;
     border-bottom-right-radius: 5px;
-   
 }
+
 .carousel .slides_container #playPause{
     width: 30px;
     height: 30px;
     bottom: 5px;
     right: 5px;
     position: absolute;
-    background-image: url(images/playPause1.png);
+    background-image: url(style_img/playPause.png);
     background-repeat: no-repeat;
     z-index: 5;
     background-size: cover;
@@ -46,6 +47,8 @@
 .carousel .slides_container .slide img{
     width: 100%;
     height: 100%;
+    /* Below set's it up so the imgs dont stretch or shrink when changing size. perfect for responsiveness*/
+    object-fit: cover;
 }
 .carousel .slides_container .slide .captionText{
     display: none;
@@ -74,7 +77,7 @@
 }
 .carousel .arrow{
     display: inline-block;
-    background-image: url(images/arrow.png);
+    background-image: url(style_img/arrow.png);
     width: 25px;
     height: 30px;
     margin: auto;
@@ -91,7 +94,6 @@
     -ms-transform: rotateZ(-180deg);
     -o-transform: rotateZ(-180deg);
 }
-
 
 .carousel .slides_container>.captionTextHolder{
     position: absolute;
@@ -131,12 +133,15 @@
 .carousel #slides_nav .indicators:first-child{
     margin-left: 0;
 }
+
+/* this changes the color of the active slide dot indicator at the bottom of the carousel */
+
 .carousel #slides_nav .indicators:hover,.carousel #slides_nav .indicators.active{
     background-color: black;;
 }
 
-
-
+/* animations below are only for transitions not the wating time for the auto-slideshow which is in the js */
+/* If you'd like the transitions to be more noticeable just add time to everything that says 0.20s */
 
 .carousel .moveLeftCurrentSlide{
     animation-name: moveLeftCurrent;
