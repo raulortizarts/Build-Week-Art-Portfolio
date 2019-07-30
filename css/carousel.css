@@ -5,6 +5,10 @@
     min-width: 200px;
     margin: auto;
     user-select: none;
+    border-top-right-radius: 50px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:50px;
+    border-bottom-right-radius: 5px;
     background: transparent;
     padding: 10px;
     box-sizing: border-box;
