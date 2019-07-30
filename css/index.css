@@ -685,6 +685,7 @@ table {
     max-width: 1024px;
   }
   .artify-container {
+      margin: 0 auto;
       max-width: 1024px;
       max-height: 2000px;   /* this can be subject to change when the rest of the code is implemented */
 
