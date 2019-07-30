@@ -10,6 +10,7 @@
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
+  <link href="css/carousel.css" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -65,6 +66,29 @@
     <section class="carousel">
       <p>carousel content</p>
       <!-- carousel -->
+      <div class="carousel">
+        <div class="slides_container">
+            <div id="playPause" onclick="playPauseSlides()"></div>
+            <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
+            <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
+            <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
+            <div class="slide">
+                <img src="images/img_1.jpg">
+                <p class="captionText">Daniel Gorostieta - Pexels</p>
+            </div>
+            <div class="slide">
+                <img src="images/img_2.jpg">
+                <p class="captionText">Todd Trapani - Pexels</p>
+            </div>
+            <div class="slide">
+                <img src="images/img_3.jpg">
+                <p class="captionText">Shvets Anna - Pexels</p>
+            </div>
+        </div>
+        <div id="slides_nav"></div>
+    </div>
+    <script src="carousel.js"></script>
+    
     </section>
     <section class="footer">
       <p>footer content</p>
