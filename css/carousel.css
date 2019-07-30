@@ -1,0 +1,201 @@
+.carousel{
+    width: 100%;
+    height: 500px;
+    max-width: 1000px;
+    margin: auto;
+    user-select: none;
+    background: transparent;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.carousel .slides_container{
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    background-color: black;
+    box-shadow: 0px 0px 5px 2px #00000078;
+    position: relative;
+    border-top-right-radius: 50px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:50px;
+    border-bottom-right-radius: 5px;
+   
+}
+.carousel .slides_container #playPause{
+    width: 30px;
+    height: 30px;
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+    background-image: url(images/playPause1.png);
+    background-repeat: no-repeat;
+    z-index: 5;
+    background-size: cover;
+    margin: 5px;
+    cursor: pointer;
+}
+.carousel .slides_container #playPause:hover{
+    opacity: .7;
+}
+.carousel .slides_container .slide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+.carousel .slides_container .slide img{
+    width: 100%;
+    height: 100%;
+}
+.carousel .slides_container .slide .captionText{
+    display: none;
+}
+
+.carousel .slides_container .leftArrow,.carousel .slides_container .rightArrow{
+    width: 50px;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transition: background 0.5s;
+    height: 72px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    -o-transition: background 0.5s;
+}
+.carousel .slides_container .rightArrow{
+    left: auto;
+    right: 0;
+}
+.carousel .slides_container .leftArrow:hover,.carousel .slides_container .rightArrow:hover{
+    cursor: pointer;
+}
+.carousel .arrow{
+    display: inline-block;
+    background-image: url(images/arrow.png);
+    width: 25px;
+    height: 30px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+ .carousel .arrow.arrowRight{
+    transform: rotateZ(-180deg);
+    -webkit-transform: rotateZ(-180deg);
+    -moz-transform: rotateZ(-180deg);
+    -ms-transform: rotateZ(-180deg);
+    -o-transform: rotateZ(-180deg);
+}
+
+
+.carousel .slides_container>.captionTextHolder{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    background: #00000047;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+}
+.carousel .slides_container>.captionTextHolder>.captionText{
+    margin: 0;
+}
+
+.carousel #slides_nav{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.carousel #slides_nav .indicators{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 5px;
+    background-color: gray;
+    cursor: pointer;
+    transition:background-color 0.5s;
+}
+.carousel #slides_nav .indicators:first-child{
+    margin-left: 0;
+}
+.carousel #slides_nav .indicators:hover,.carousel #slides_nav .indicators.active{
+    background-color: black;;
+}
+
+
+
+
+.carousel .moveLeftCurrentSlide{
+    animation-name: moveLeftCurrent;
+    animation-duration: 0.20s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+
+}
+.carousel .moveLeftNextSlide{
+    animation-name: moveLeftNext;
+    animation-duration: 0.20s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+@keyframes moveLeftCurrent {
+    from {margin-left: 0;opacity: 1;}
+    to {margin-left: -100%;opacity: 1;}
+}
+@keyframes moveLeftNext {
+    from {margin-left: 100%;opacity: 1;}
+    to {margin-left: 0%;opacity: 1;}
+}
+
+
+.carousel .moveRightCurrentSlide{
+    animation-name: moveRightCurrent;
+    animation-duration: 0.20s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+.carousel .moveRightPrevSlide{
+    animation-name: moveRightPrev;
+    animation-duration: 0.20s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+@keyframes moveRightCurrent {
+    from {margin-left: 0;opacity: 1;}
+    to {margin-left: 100%;opacity: 1;}
+}
+@keyframes moveRightPrev {
+    from {margin-left: -100%;opacity: 1;}
+    to {margin-left: 0%;opacity: 1;}
+}
+.slideTextFromBottom {
+    animation-name: slideTextFromBottom;
+    animation-duration: 0.10s;
+    animation-timing-function: ease-out;
+}
+@keyframes slideTextFromBottom {
+    from {opacity: 0;margin-top: 100px}
+    to {opacity: 1;margin-top: 0px;}
+}
+.slideTextFromTop {
+    animation-name: slideTextFromTop;
+    animation-duration: 0.10s;
+    animation-timing-function: ease-out;
+}
+@keyframes slideTextFromTop {
+    from {opacity: 0;margin-top: -100px}
+    to {opacity: 1;margin-top: 0px;}
+}
