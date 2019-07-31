@@ -1,110 +1,124 @@
-.contsiner{
+.contsiner {
     width: 100%;
-}
-.wrapper{
+  }
+  .wrapper {
     width: 80%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 0 auto;
-
-}
-
-.article{
+  }
+  @media (width: 500px) {
+    .wrapper {
+      width: 100%;
+    }
+  }
+  .article {
     width: 60%;
-    margin-right: 40px; 
     padding: 20px;
-}
-     .section header  h3{
-        font-size: 2rem;
-        display: inline;
-        margin: 0px 0px 0px 10px;
-        cursor: pointer;
-
-    } 
-    .section header img{
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-
+  }
+  @media (width: 500px) {
+    .article {
+      width: 100%;
+      margin: 0 auto;
     }
-    .article .entry-content{
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-        flex-flow: row wrap;
+  }
+  .section header h3 {
+    font-size: 2rem;
+    display: inline;
+    margin: 0px 0px 0px 10px;
+    cursor: pointer;
+  }
+  .section header img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .article .entry-content {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-flow: row wrap;
+  }
+  .article .entry-content img {
+    margin-right: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  @media (width: 500px) {
+    .article .entry-content img {
+      width: 80%;
+      margin: 0 auto;
     }
-    .article .entry-content img{
-        margin-right: 20px;
-        cursor: pointer;
+  }
+  .article .entry-content p {
+    width: 63%;
+    margin-top: 0px;
+    font-size: 1.6rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  @media (width: 500px) {
+    .article .entry-content p {
+      width: 100%;
     }
-     .article .entry-content p{ 
-         width: 63%;
-         margin-top: 0px; 
-        font-size: 1.6rem;
-        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-        
-    }
-.aside{
+  }
+  .aside {
     width: 25%;
     margin-right: 40px;
-}
-.aside ul{
+  }
+  .aside ul {
     list-style-type: square;
-    
-}
-.aside ul li a {
+  }
+  .aside ul li a {
     text-decoration: none;
     color: black;
-    font-weight: bold; 
+    font-weight: bold;
     font-size: 1.01rem;
-} 
-.tutorials{
+  }
+  .tutorials {
     display: flex;
     flex-wrap: wrap;
-}
-.tutorials h4{
+  }
+  .tutorials h4 {
     width: 100%;
     font-size: 1.8rem;
-}
-.tutorials .some h6{ 
+  }
+  .tutorials .some h6 {
     width: 100%;
-     font-size: 1.4rem;
-}
-.some{
+    font-size: 1.4rem;
+  }
+  .some {
     margin: 10px 0px;
     width: 45%;
-}
-.some img{
+  }
+  .some img {
     width: 45%;
-}
-
-/* article Modals styles */
-.modal{
+  }
+  /* article Modals styles */
+  .modal {
     display: none;
     position: fixed;
     z-index: 1;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); /*Modal Background opacity Opacity */
-    top: 0; 
-}
-
- .modalArticle{
+    background-color: rgba(0, 0, 0, 0.4);
+    /*Modal Background opacity Opacity */
+    top: 0;
+  }
+  .modalArticle {
     width: 65%;
-     background: #ffffff;
-     margin: 10px auto;
-     padding: 10px;
-     text-align: center;
-}
-
-.close{
+    background: #ffffff;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+  }
+  .close {
     float: right;
     cursor: pointer;
-    margin-bottom : 20px;
+    margin-bottom: 20px;
     position: relative;
-   font-size: 28px; 
+    font-size: 28px;
     font-weight: 900px;
-} 
+  }
+  
