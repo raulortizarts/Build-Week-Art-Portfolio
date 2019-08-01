@@ -16,7 +16,15 @@
   }
   .us .newsletter form{
     height: 45px;
-    width: 100%
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .us .newsletter form input{
+    height: 30px;
+  }
+  .us .newsletter h3{
+    font-size: 2rem;
   }
   .us .newsletter form :first-child{
     width: 45%;
