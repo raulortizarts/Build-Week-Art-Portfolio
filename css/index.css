@@ -923,14 +923,31 @@ tablet, mobile
 
 }
 
-.features-container .feature-title {
-  width: 100%;
+.features-container .feature-list .feature:last-child {
+  border-bottom-right-radius: 50px;
+}
+
+.features-container .feature-list .feature:first-child {
+  border-top-left-radius: 50px;
+}
+
+.features-container .feature-list .feature .feature-info {
+ margin-top: 10px;
+}
+.feature-title {
+  width: 25%;
+  margin: 0  0 5px 50px;
+  border-top-right-radius: 5px;
+    border-top-left-radius:50px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0.8,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.features-container .feature-title h2 {
+.feature-title h2 {
   width: 25%;
   display: flex;
   align-items: center;
