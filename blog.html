@@ -5,30 +5,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Adrian Photography</title>
+  <title>Artify</title>
   
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto" rel="stylesheet">
-  <link href="css/blog.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
+  <link href="css/blog.css" rel="stylesheet">
   <link href="css/footer.css" rel="stylesheet">
 
 </head>
 
-<body>
-    
+<body>    
     <header>
-        <div class="header-content">
-            <h1>photography</h1>
-            <ul>
-                <li><a class="active" href="about.html"> About Us</a></li>
-                <li><a class="active" href="contact.html"> Contact</a></li>
-                <li><a class="active" href="blog.html"> Blog</a></li>
-                <li><a class="active" href="index.html"> Home</a></li>
-            </ul>
+            <!-- mobile dropdown header -->
+        <div class="container">
+            <h1>Artify</h1>
+            <div class="content"> 
+                <nav role="navigation">
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <li><a class="active" href="index.html"> Home</a></li>
+                            <li><a class="active" href="about.html"> About Us</a></li>
+                            <li><a class="active" href="blog.html"> Blog</a></li>
+                            <li><a class="active" href="login.html"> Log In</a></li>
+                            <li><a class="active" href="signup.html"> Sign Up</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
-    <div class="modal">
+    <div class="modal" >
+
     </div>
+    <div class="jumbotron">    </div>
     <div class="container">
         <div class="wrapper">
         <div class="article">
@@ -58,6 +71,16 @@
     <footer class="footer">
         <p> Copyright 2019 &copy;</p>
     </footer>
+    <script>
+        const header = document.querySelector("header");
+        header.style.position = "fixed";
+        header.style.width = "100%";
+        header.style.zIndex = '1';
+        header.style.top = "0";
+        header.style.boxShadow =  `0 1px 6px 0 rgba(32,33,36,0.28)`;
+        const jumbotron = document.querySelector(".jumbotron");
+        jumbotron.style.marginTop = "100px"
+    </script>
     <script src="./js/blogfiles.js">    
     </script>    
     <script src="js/blog.js"></script> 

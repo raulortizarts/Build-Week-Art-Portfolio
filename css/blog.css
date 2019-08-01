@@ -1,110 +1,175 @@
-.contsiner{
+.contsiner {
     width: 100%;
-}
-.wrapper{
+  }
+  /* Creatign Jumbotron Slider */
+  .jumbotron{
+      background: grey url('./../images//blogImages/jumbotron.png');
+      width: 100%;
+      margin: 0px;
+      text-align: center;   
+      height: 300px;
+      box-sizing: border-box;
+      -webkit-animation: slide 20s linear infinite;
+  }
+
+  @-webkit-keyframes slide{
+      from { background-position: 0 0;}
+      to {background-position: -400px 0;}
+  }
+  /* End of slider styling */
+  .wrapper {
     width: 80%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 0 auto;
-
-}
-
-.article{
+  }
+  @media screen and (max-width: 500px) {
+    .wrapper {
+      width: 100%;
+    }
+  }
+  .article {
     width: 60%;
-    margin-right: 40px; 
     padding: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    .article {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .section header h3 {
+    font-size:3rem;
+    display: inline;
+    margin: 0px 0px 0px 10px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .section header h3:hover{
+      color: gray;
+      transition-duration: 1s;
+  }
+  .section header img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .section header h5 {
+    margin: 10px 0px 0px 0px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    letter-spacing: 0.3px;
+  }
+  .article .section .entry-content {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 25px;
 }
-     .section header  h3{
-        font-size: 2rem;
-        display: inline;
-        margin: 0px 0px 0px 10px;
-        cursor: pointer;
 
-    } 
-    .section header img{
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
+@media screen and (max-width: 1000px) {
+    .article .section .entry-content  {
+        flex-direction: column;
+        align-items: center;
+        /* flex-wrap: wrap; */
+    }
+}
 
+  .article .section .entry-content .img {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 300px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    .article.section.entry-content.img {
+      width: 80%;
+      margin: 0 auto;
     }
-    .article .entry-content{
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-        flex-flow: row wrap;
+  }
+  .article .entry-content p {
+    /* width: 63%; */
+    margin-top: 0px;
+    font-size: 1.6rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  @media screen and (max-width: 500px) {
+    .article .entry-content p {
+      width: 100%;
     }
-    .article .entry-content img{
-        margin-right: 20px;
-        cursor: pointer;
-    }
-     .article .entry-content p{ 
-         width: 63%;
-         margin-top: 0px; 
-        font-size: 1.6rem;
-        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-        
-    }
-.aside{
+  }
+  hr{
+    margin: 20px 0px;   
+  }
+  .aside {
     width: 25%;
     margin-right: 40px;
-}
-.aside ul{
-    list-style-type: square;
-    
-}
-.aside ul li a {
+  }
+  @media screen and (max-width: 500px) {
+    .aside {
+      display: none;
+    }
+  }
+  .aside ul {
+    list-style-type: none;
+    padding-left: 10px;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+  .aside ul li a {
     text-decoration: none;
     color: black;
-    font-weight: bold; 
-    font-size: 1.01rem;
-} 
-.tutorials{
+    font-size: 1.4rem;
+}
+ 
+  .tutorials {
     display: flex;
     flex-wrap: wrap;
-}
-.tutorials h4{
+  }
+  .tutorials h4 {
     width: 100%;
     font-size: 1.8rem;
-}
-.tutorials .some h6{ 
+  }
+  .tutorials .some h6 {
     width: 100%;
-     font-size: 1.4rem;
-}
-.some{
+    font-size: 1.4rem;
+  }
+  .some {
     margin: 10px 0px;
     width: 45%;
-}
-.some img{
+  }
+  .some img {
     width: 45%;
-}
-
-/* article Modals styles */
-.modal{
+  }
+  /* article Modals styles */
+  .modal {
     display: none;
     position: fixed;
     z-index: 1;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); /*Modal Background opacity Opacity */
-    top: 0; 
-}
-
- .modalArticle{
+    background-color: rgba(0, 0, 0, 0.4);
+    /*Modal Background opacity Opacity */
+    top: 0;
+  }
+  .modalArticle {
     width: 65%;
-     background: #ffffff;
-     margin: 10px auto;
-     padding: 10px;
-     text-align: center;
-}
-
-.close{
+    background: #ffffff;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+  }
+  .close {
     float: right;
     cursor: pointer;
-    margin-bottom : 20px;
+    margin-bottom: 20px;
     position: relative;
-   font-size: 28px; 
+    font-size: 28px;
     font-weight: 900px;
-} 
+  }
+  /* Making header fixed */
+ 
