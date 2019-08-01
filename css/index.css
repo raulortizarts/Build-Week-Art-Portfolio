@@ -923,6 +923,10 @@ tablet, mobile
 
 }
 
+#feature-one {
+  border-top-left-radius: 50px;
+}
+
 .features-container .feature-list .feature:last-child {
   border-bottom-right-radius: 50px;
 }
