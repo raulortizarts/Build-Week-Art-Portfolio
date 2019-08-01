@@ -1,6 +1,21 @@
 .contsiner {
     width: 100%;
   }
+  /* Creatign Jumbotron Slider */
+  .jumbotron{
+      background: grey url('./../images//blogImages/jumbotron.png');
+      width: 100%;
+      margin: 0px;
+      text-align: center;   
+      height: 300px;
+      box-sizing: border-box;
+      -webkit-animation: slide 20s linear infinite;
+  }
+
+  @-webkit-keyframes slide{
+      from { background-position: 0 0;}
+      to {background-position: -400px 0;}
+  }
   .wrapper {
     width: 80%;
     display: flex;

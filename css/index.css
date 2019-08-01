@@ -593,6 +593,7 @@ ul {
     justify-content: flex-end;
     align-items: center;
     background-color: white;
+    /* position: fixed; */
   }
   .content {
     width: 100%;
