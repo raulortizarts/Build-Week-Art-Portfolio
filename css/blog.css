@@ -16,6 +16,7 @@
       from { background-position: 0 0;}
       to {background-position: -400px 0;}
   }
+  /* End of slider styling */
   .wrapper {
     width: 80%;
     display: flex;
@@ -53,8 +54,7 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    
-    
+    margin-top: 25px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -70,6 +70,7 @@
     flex-grow: 0;
     width: 300px;
     cursor: pointer;
+    margin-right: 20px;
   }
   @media screen and (max-width: 500px) {
     .article .entry-content img {
@@ -87,6 +88,9 @@
     .article .entry-content p {
       width: 100%;
     }
+  }
+  hr{
+    margin: 20px 0px;   
   }
   .aside {
     width: 25%;
