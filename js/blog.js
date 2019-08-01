@@ -13,13 +13,13 @@ blogObj.forEach((object, index) => {
     blogElems += `
         <div class='section '>
             <header>
-              <img src = './../images/blogImages/drupal.png'><h3>${object.title}</h3>
-            <h5>On <span>${randomDate()}</span> by ${object.author}</h5>
+                <img src = './../images/blogImages/drupal.png'><h3>${object.title}</h3>
+                <h5>On <span>${randomDate()}</span> by ${object.author}</h5>
             </header>
             <div class="entry-content">
-               <img src='${object.img}' alt='${object.title}'>  
-                <p>${object.description}</p>
-              
+
+                    <img class="img" src='${object.img}' alt='${object.title}'>  
+                    <p>${object.description}</p>
             </div>
             
         </div> <hr>

@@ -5,17 +5,25 @@
     margin-top: 30px;
     background: #7387ad;
     display: flex;
+    justify-content: space-between;
     padding: 20px;
 }
  .menu, .services, .us{
      width: 33.333%;
  }
- 
  .menu ul, .services ul{
-     list-style-type: none;
-   }
- .menu ul li , .services ul li{
-     margin: 10px;
+   list-style-type: none;
+  }
+  .us .newsletter form{
+    height: 45px;
+    width: 100%
+  }
+  .us .newsletter form :first-child{
+    width: 45%;
+    
+  }
+  .menu ul li , .services ul li{
+    margin: 10px;
      font-weight: bolder;
    }
     .menu ul li a, .services ul li a{
