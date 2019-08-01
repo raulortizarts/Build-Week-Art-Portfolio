@@ -1034,6 +1034,8 @@ tablet, mobile
   @media (max-width: 500px) {
     .card {
         width: 100%;
+        display: flex;
+    justify-content: space-evenly;
     }  
     
   }
@@ -1045,10 +1047,12 @@ tablet, mobile
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
 }
   /* a lil space for content -- add social media  */
-  .container {
+  .about-container {
+    display: flex;
+    justify-content: space-evenly;
     padding: 20px 16px;
   }
-  .container a:hover {
+  .about-container a:hover {
       opacity: 0.5;
   }
   
