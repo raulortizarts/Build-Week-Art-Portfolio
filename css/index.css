@@ -542,6 +542,13 @@ table {
     font-size: 3.2rem;
     padding-bottom: 10px;
   } 
+
+  h3 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.2rem;
+      padding-bottom: 10px;
+    } 
+  
   h4 {
     font-size: 2.5rem;
     padding-bottom: 10px;
@@ -788,6 +795,7 @@ tablet, mobile
   justify-content: space-evenly;
 }
 
+
 .features-container .feature-list .feature {
   width: 20%;
   height: 90%;
@@ -807,14 +815,35 @@ tablet, mobile
 
 }
 
-.features-container .feature-title {
-  width: 100%;
+#feature-one {
+  border-top-left-radius: 50px;
+}
+
+.features-container .feature-list .feature:last-child {
+  border-bottom-right-radius: 50px;
+}
+
+.features-container .feature-list .feature:first-child {
+  border-top-left-radius: 50px;
+}
+
+.features-container .feature-list .feature .feature-info {
+ margin-top: 10px;
+}
+.feature-title {
+  width: 25%;
+  margin: 0  0 5px 50px;
+  border-top-right-radius: 5px;
+    border-top-left-radius:50px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0.8,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.features-container .feature-title h2 {
+.feature-title h3 {
   width: 25%;
   display: flex;
   align-items: center;
@@ -897,6 +926,8 @@ tablet, mobile
   @media (max-width: 500px) {
     .card {
         width: 100%;
+        display: flex;
+    justify-content: space-evenly;
     }  
     
   }
@@ -908,9 +939,11 @@ tablet, mobile
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
 }
   /* a lil space for content -- add social media  */
-  .container {
+  .about-container {
+    display: flex;
+    justify-content: space-evenly;
     padding: 20px 16px;
   }
-  .container a:hover {
+  .about-container a:hover {
       opacity: 0.5;
   }
