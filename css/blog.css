@@ -85,7 +85,7 @@
     margin-right: 20px;
   }
   @media screen and (max-width: 500px) {
-    .article .entry-content img {
+    .article.section.entry-content.img {
       width: 80%;
       margin: 0 auto;
     }
@@ -107,6 +107,11 @@
   .aside {
     width: 25%;
     margin-right: 40px;
+  }
+  @media screen and (max-width: 500px) {
+    .aside {
+      display: none;
+    }
   }
   .aside ul {
     list-style-type: none;
