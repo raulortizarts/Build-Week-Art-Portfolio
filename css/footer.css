@@ -3,9 +3,19 @@
     width: 100%;
     bottom: 0px;
     margin-top: 30px;
-    background: #7387ad;
+    background: grey;
     display: flex;
     padding: 20px;
+}
+
+.footer-container {
+  width: 100%;
+  bottom: 0px;
+  margin-top: 30px;
+  border-top-right-radius: 500px;
+  background: #7387ad;
+  display: flex;
+  padding: 20px;
 }
  .menu, .services, .us{
      width: 33.333%;
