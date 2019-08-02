@@ -596,11 +596,14 @@ ul {
     Display: flex;
     flex-direction: row;
     width: 100%;
+    max-width: 1024px;
     height: 100%;
     justify-content: flex-end;
     align-items: center;
     background-color: white;
     /* position: fixed; */
+    padding: 20px;
+    margin: auto;
   }
   .content {
     width: 100%;
@@ -664,7 +667,7 @@ ul {
   }
   #menu {
     position: absolute;
-    width: 200px;
+    width: 250px;
     height: 400px;
     box-shadow: 0 0 16px #85888C;
     margin: -50px 0 0 -150px;
@@ -674,6 +677,10 @@ ul {
     transform-origin: 0% 0%;
     transform: translate(0, -100%);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    border-top-right-radius: 5px;
+    border-top-left-radius:50px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius: 50px;
   }
   #menu li {
     padding: 20px 0;
@@ -693,18 +700,21 @@ tablet, mobile
 
 /* cta content container - parent */
 .cta-wrap { /* cta img text container*/
-    position: relative;
-    display: inline-block;
-    padding: 1%;
-    border-top-right-radius: 5px;
-    border-top-left-radius:50px;
-    border-bottom-left-radius:5px;
-    border-bottom-right-radius: 50px;
-    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.1);
-    /* center the div */
-    margin-left: 50%; /* From parent width */
-    transform: translateX(-50%); /* use self width which can be unknown */
-   -ms-transform: translateX(-50%); /* For IE9 */
+  display: flex;
+  width: 100%;
+  max-width: 1024px;
+  padding: 1%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0.8,0,0,0.2);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  /* center the div */
+  margin-left: 50%; /* From parent width */
+  transform: translateX(-50%); /* use self width which can be unknown */
+  -ms-transform: translateX(-50%); /* For IE9 */
  
 }
 
@@ -713,21 +723,9 @@ tablet, mobile
   border-top-left-radius:50px;
   border-bottom-left-radius:5px;
   border-bottom-right-radius: 50px;
+  
 }
-/* text container. child */
-.cta-text {  
-    position: absolute;
-    z-index: 999;
-    margin: 0 auto;
-    left: 0;
-    right: 50%;
-    top: 30%;
-    width: 50%;
-}
-.img-text {
-    font-size: 72pt;
-    color: white;
-}
+
 
 /* mission statement container */
 .mission-statement {
@@ -753,8 +751,11 @@ tablet, mobile
     color: black;
     background-color: white;
     padding: 20px 50px;
-    border-radius: 5px;
-    font-size: 14pt;
+    border-top-right-radius: 5px;
+    border-top-left-radius:50px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius: 50px;
+    font-size: 1.6em;
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
 
 }
