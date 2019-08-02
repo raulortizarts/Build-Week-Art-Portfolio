@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artify</title>
   <!-- fonts -->
+
   <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
   <link href="css/carousel.css" rel="stylesheet">
   <link href="css/footer.css" rel="stylesheet">
@@ -25,7 +27,7 @@
       <!-- mobile dropdown header -->
       <div class="container">
         <h1>Artify</h1>
-        <div class="content"> 
+        <div class="content">
           <nav role="navigation">
             <div id="menuToggle">
               <input type="checkbox" />
@@ -48,10 +50,6 @@
     <!-- landing page  -->
     <div class="cta-wrap">
       <img src="img/photographer.jpg">
-      <div class="cta-text">
-        <p class="img-text"><b>Create</b></p>
-        <!-- <a href='#'></a><button class="signup-btn"> Log In</button> -->
-      </div>
     </div>
     <!-- mission statement, button for log in and sign up. -->
     <div class="mission-statement">
@@ -64,39 +62,43 @@
       </div>
     </div>
 
-  <div class="feature-title">
+    <div class="feature-title">
 
-            <h2 style="text-align: center">Features</h2>
+      <h2 style="text-align: center">Features</h2>
 
-          </div>
+    </div>
     <section class="features-container">
 
-       
-      
+
+
       <div class="feature-list">
 
-          <div class="feature">
-        <img id= feature-one src="images/carousel/img_3.jpg">
-        <p class="feature-info">*Login Page - After a user logs in, they'll be directed their portfolio page where they can create a "post". 
-          Each post needs to have an image, description and and upvote section to it. (Think instagram for artists).</p>
-      </div>
+        <div class="feature">
+          <img id=feature-one src="images/carousel/img_3.jpg">
+          <p class="feature-info">*Login Page - After a user logs in, they'll be directed their portfolio page where
+            they can create a "post".
+            Each post needs to have an image, description and and upvote section to it. (Think instagram for artists).</p>
+        </div>
 
-      <div class="feature">
-        <img src="images/carousel/img_3.jpg">
-        <p class="feature-info">*Navigation - Navigation is present on all pages, Users should know what page is active by clicking on a nav link and activating their tab.</p>
-      </div>
-
-      <div class="feature">
+        <div class="feature">
           <img src="images/carousel/img_3.jpg">
-          <p class="feature-info">*Create Post Page - Allows a user to come in and create a post of their artwork.</p> 
+          <p class="feature-info">*Navigation - Navigation is present on all pages, Users should know what page is
+            active by clicking on a nav link and activating their tab.</p>
+        </div>
+
+        <div class="feature">
+          <img src="images/carousel/img_3.jpg">
+          <p class="feature-info">*Create Post Page - Allows a user to come in and create a post of their artwork.</p>
           <p>*Edit Post Page - User can edit their post descriptions.</p>
         </div>
 
         <div class="feature">
-            <img src="images/carousel/img_3.jpg">
-            <p class="feature-info">
-            <p>*Home Page for non-logged in users - Navigating to the home page Users can view posts of different artists laid out in a single format. Users can click on a single post to read more of the description etc.</p>
-          </div>
+          <img src="images/carousel/img_3.jpg">
+          <p class="feature-info">
+            <p>*Home Page for non-logged in users - Navigating to the home page Users can view posts of different
+              artists laid out in a single format. Users can click on a single post to read more of the description
+              etc.</p>
+        </div>
 
       </div>
     </section>
@@ -106,43 +108,45 @@
       <!-- carousel -->
       <div class="carousel">
         <div class="slides_container">
-            <div id="playPause" onclick="playPauseSlides()"></div>
-            <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
-            <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
-            <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
-            <div class="slide">
-                <img src="images/carousel/img_1.jpg">
-                <p class="captionText">Daniel Gorostieta - Pexels</p>
-            </div>
-            <div class="slide">
-                <img src="images/carousel/img_2.jpg">
-                <p class="captionText">Todd Trapani - Pexels</p>
-            </div>
-            <div class="slide">
-                <img src="images/carousel/img_3.jpg">
-                <p class="captionText">Shvets Anna - Pexels</p>
-            </div>
+          <div id="playPause" onclick="playPauseSlides()"></div>
+          <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
+          <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
+          <div class="captionTextHolder">
+            <p class="captionText slideTextFromTop"></p>
+          </div>
+          <div class="slide">
+            <img src="images/carousel/img_1.jpg">
+            <p class="captionText">Daniel Gorostieta - Pexels</p>
+          </div>
+          <div class="slide">
+            <img src="images/carousel/img_2.jpg">
+            <p class="captionText">Todd Trapani - Pexels</p>
+          </div>
+          <div class="slide">
+            <img src="images/carousel/img_3.jpg">
+            <p class="captionText">Shvets Anna - Pexels</p>
+          </div>
         </div>
         <div id="slides_nav"></div>
-    </div>
+      </div>
     </section>
     <footer class="footer">
-        <p> Copyright 2019 &copy;</p>
-    </footer> 
+      <p> Copyright 2019 &copy;</p>
+    </footer>
   </div>
   <script>
     const header = document.querySelector("header");
     const container = document.querySelector(".cta-wrap");
     header.style.position = "fixed"
     header.style.width = "100%"
-    header.style.zIndex = '1';
+    header.style.zIndex = '999';
     header.style.top = "0"
-    header.style.boxShadow =  `0 1px 6px 0 rgba(32,33,36,0.28)`;
-    container.style.marginTop = "100px";
-  </script> 
+    header.style.boxShadow = `0 1px 6px 0 rgba(32,33,36,0.28)`;
+    container.style.marginTop = "200px";
+  </script>
   <script src="js/carousel.js"></script>
-  <script src="js/footer.js"></script> 
- 
+  <script src="js/footer.js"></script>
+
 </body>
 
 </html>
