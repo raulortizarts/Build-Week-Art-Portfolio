@@ -5,7 +5,7 @@
   .jumbotron{
       background: grey url('./../images//blogImages/jumbotron.png');
       width: 100%;
-      margin: 0px;
+      margin: 165px 0px 0px 0px ;
       text-align: center;   
       height: 300px;
       box-sizing: border-box;
@@ -172,4 +172,7 @@
     font-weight: 900px;
   }
   /* Making header fixed */
+  .second{
+    max-width: 100%;
+  }
  
