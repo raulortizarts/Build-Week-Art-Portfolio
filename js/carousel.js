@@ -42,6 +42,8 @@ function initcarousel(){
     //to each created element in the array adds class of active
     indicators[slideIndex].classList.add("active");
 }
+//we just basically created some empty elements in the html under slides_nav
+//these can be styled with css to be visible
 
 //calling the func
 initcarousel();
@@ -57,11 +59,14 @@ function moveSlide(n){
           forNext:""
     };
     var slideTextAnimClass;
+    //if index is greater than the n arg
+    //moves current and next slides into position
     if(n>slideIndex) {
         if(n >= slides.length){n=0;}
         moveSlideAnimClass.forCurrent="moveLeftCurrentSlide";
         moveSlideAnimClass.forNext="moveLeftNextSlide";
         slideTextAnimClass="slideTextFromTop";
+        //do the opposite if lesser than
     }else if(n<slideIndex){
         if(n<0){n=slides.length-1;}
         moveSlideAnimClass.forCurrent="moveRightCurrentSlide";
@@ -74,6 +79,7 @@ function moveSlide(n){
         current=slides[slideIndex];
         for (i = 0; i < slides.length; i++) {
             slides[i].className = "slide";
+            //hides image and removes class active
             slides[i].style.opacity=0;
             indicators[i].classList.remove("active");
         }
@@ -89,14 +95,22 @@ function moveSlide(n){
 
 }
 var timer=null;
+
+//using the setTimer func activate slides moving func every interval
 function setTimer(){
     timer=setInterval(function () {
         plusSlides(1) ;
     },5000);
 }
+
+//call timer
 setTimer();
+
+//stoping or activating timer with button
 function playPauseSlides() {
     var playPauseBtn=document.getElementById("playPause");
+    //if timer is null move icon image to possition 
+    //and vise versa
     if(timer==null){
         setTimer();
         playPauseBtn.style.backgroundPositionY="0px"
