@@ -105,15 +105,21 @@
 
 
     <section class="carousel-container">
-      <!-- carousel -->
+
+      <!-- carousel snippet-->
+
       <div class="carousel">
+
         <div class="slides_container">
+
           <div id="playPause" onclick="playPauseSlides()"></div>
-          <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
-          <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
+          <div onclick="switchSlide(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
+          <div onclick="switchSlide(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
           <div class="captionTextHolder">
             <p class="captionText slideTextFromTop"></p>
           </div>
+
+           <!-- add slides here-->
           <div class="slide">
             <img src="images/carousel/img_1.jpg">
             <p class="captionText">Daniel Gorostieta - Pexels</p>
@@ -127,9 +133,15 @@
             <p class="captionText">Shvets Anna - Pexels</p>
           </div>
         </div>
+
         <div id="slides_nav"></div>
+
       </div>
+
+      <!-- end carousel snippet-->
+       
     </section>
+
     <footer class="footer">
       <p> Copyright 2019 &copy;</p>
     </footer>

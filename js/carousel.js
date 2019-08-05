@@ -1,35 +1,36 @@
 
 var slideIndex,slides,indicators,captionText;
 
-function initcarousel(){
+function initiateCarousel(){
+    //Setting first slide as index 0
     slideIndex = 0;
     //Below im getting the element in the html class slide and defining them as slides var
-    slides=document.getElementsByClassName("slide");
+    slides = document.getElementsByClassName("slide");
     //access the style pro of the prev def element and
     //making it visible
-    slides[slideIndex].style.opacity=1;
+    slides[slideIndex].style.opacity = 1;
 
     //defining the var captiontext as the selector for class captiontext
-    captionText=document.querySelector(".captionTextHolder .captionText");
+    captionText = document.querySelector(".captionTextHolder .captionText");
     //using the innertext property, and getting text within each captiontext element
-    captionText.innerText=slides[slideIndex].querySelector(".captionText").innerText;
+    captionText.innerText = slides[slideIndex].querySelector(".captionText").innerText;
 
     //disabling nextPrevBtn if slide count is one
     if(slides.length<2){
-        var nextPrevBtns=document.querySelector(".leftArrow,.rightArrow");
-        nextPrevBtns.style.display="none";
+        var nextPrevBtns = document.querySelector(".leftArrow,.rightArrow");
+        nextPrevBtns.style.display = "none";
         for (i = 0; i < nextPrevBtn.length; i++) {
             nextPrevBtn[i].style.display="none";
         }
     }
 
     //adding indicators elements using a for loop
-    indicators=[];
-    var slides_nav=document.getElementById("slides_nav"),i;
+    indicators = [];
+    var slides_nav = document.getElementById("slides_nav"),i;
     for (i = 0; i < slides.length; i++) {
         //took the slides and ran a for loop 
         //for each element creates a span
-        var indicator=document.createElement("span");
+        var indicator = document.createElement("span");
         //adds class of indicators to each
         indicator.classList.add("indicators");
         //appends under slides_nav class element
@@ -46,9 +47,9 @@ function initcarousel(){
 //these can be styled with css to be visible
 
 //calling the func
-initcarousel();
+initiateCarousel();
 
-function plusSlides(n) {
+function switchSlide(n) {
     moveSlide(slideIndex+n);
 }
 function moveSlide(n){
@@ -99,7 +100,7 @@ var timer=null;
 //using the setTimer func activate slides moving func every interval
 function setTimer(){
     timer=setInterval(function () {
-        plusSlides(1) ;
+        switchSlide(1) ;
     },5000);
 }
 
@@ -113,10 +114,10 @@ function playPauseSlides() {
     //and vise versa
     if(timer==null){
         setTimer();
-        playPauseBtn.style.backgroundPositionY="0px"
+        playPauseBtn.style.backgroundPositionY="2px"
     }else{
         clearInterval(timer);
         timer=null;
-        playPauseBtn.style.backgroundPositionY="-33px"
+        playPauseBtn.style.backgroundPositionY="-30px"
     }
 }
