@@ -693,10 +693,14 @@ ul {
   }
 
   .content {
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     background: transparent;
   }
+
   nav {
     display: flex;
     justify-content:space-between;
@@ -705,15 +709,15 @@ ul {
   }
 
   h1{
-    display: flex;
     width: 100%;
-    justify-content:space-around;
+    display: flex;
+    justify-content:space-evenly;
 
   }
   #menuToggle {
     display: flex;
     flex-direction: column;
-    /* position: relative; */
+    position: relative;
     top: 25px;
     right: 25px;
     z-index: 1;
@@ -797,6 +801,7 @@ tablet, mobile
   display: flex;
   width: 100%;
   max-width: 1000px;
+  max-height: 500px;
   padding: 1%;
   border-top-right-radius: 5px;
   border-top-left-radius: 50px;
@@ -813,10 +818,13 @@ tablet, mobile
 }
 
 .cta-wrap img {
+  width:100%;
+  max-height: 500px;
   border-top-right-radius: 5px;
   border-top-left-radius:50px;
   border-bottom-left-radius:5px;
   border-bottom-right-radius: 50px;
+  object-fit: cover;
 }
 
 

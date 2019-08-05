@@ -33,11 +33,27 @@
   }
   .us .newsletter form input{
     height: 30px;
-    border-top-right-radius: 50px;
-    border-top-left-radius:5px;
-    border-bottom-left-radius:50px;
-    border-bottom-right-radius: 5px;
+   
   }
+
+input,
+[type="submit"]
+{
+  border-top-right-radius: 50px;
+  border-top-left-radius:5px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius: 5px;
+}
+
+input,
+[type="email"]
+{
+  border-top-right-radius: 5px;
+  border-top-left-radius:5px;
+  border-bottom-left-radius:50px;
+  border-bottom-right-radius: 5px;
+}
+
   .us .newsletter h3{
     font-size: 2rem;
   }
