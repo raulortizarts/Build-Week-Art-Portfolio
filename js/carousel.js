@@ -1,14 +1,20 @@
 
 var slideIndex,slides,indicators,captionText;
+
 function initcarousel(){
     slideIndex = 0;
+    //Below im getting the element in the html class slide and defining them as slides var
     slides=document.getElementsByClassName("slide");
+    //access the style pro of the prev def element and
+    //making it visible
     slides[slideIndex].style.opacity=1;
 
+    //defining the var captiontext as the selector for class captiontext
     captionText=document.querySelector(".captionTextHolder .captionText");
+    //using the innertext property, and getting text within each captiontext element
     captionText.innerText=slides[slideIndex].querySelector(".captionText").innerText;
 
-    //disable nextPrevBtn if slide count is one
+    //disabling nextPrevBtn if slide count is one
     if(slides.length<2){
         var nextPrevBtns=document.querySelector(".leftArrow,.rightArrow");
         nextPrevBtns.style.display="none";
@@ -17,19 +23,29 @@ function initcarousel(){
         }
     }
 
-    //add indicators
+    //adding indicators elements using a for loop
     indicators=[];
     var slides_nav=document.getElementById("slides_nav"),i;
     for (i = 0; i < slides.length; i++) {
+        //took the slides and ran a for loop 
+        //for each element creates a span
         var indicator=document.createElement("span");
+        //adds class of indicators to each
         indicator.classList.add("indicators");
+        //appends under slides_nav class element
         slides_nav.append(indicator);
+
         indicator.setAttribute("onclick","moveSlide("+i+")");
+        //push the createdelement to the array
         indicators.push(indicator);
     }
+    //to each created element in the array adds class of active
     indicators[slideIndex].classList.add("active");
 }
+
+//calling the func
 initcarousel();
+
 function plusSlides(n) {
     moveSlide(slideIndex+n);
 }
