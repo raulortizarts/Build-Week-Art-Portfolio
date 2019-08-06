@@ -48,9 +48,17 @@
     cursor: pointer;
     padding: 5px;
   }
+
+  .section header{
+    border-top-right-radius: 25px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius: 5px;
+  }
   .section header h3:hover{
       color: gray;
       transition-duration: 1s;
+    
   }
   .section header img {
     width: 30px;
